@@ -1,0 +1,44 @@
+$lt-gray: #ddd;
+$background-dark: #512DA8;
+$background-light: #9575CD;
+$background-pale: #D1C4E9;
+
+@mixin zero-margin($pad-up-down, $pad-left-right) {
+  margin: 0 auto;
+  padding: $pad-up-down $pad-left-right;
+}
+
+.footer {
+  background-color: $background-pale;
+  @include zero-margin(20px, 0);
+}
+
+.btn-facebook {
+  color: #fff !important;
+  background-color: lightblue
+}
+
+.btn-google-plus {
+  color: #fff !important;
+  background-color: pink
+}
+
+.btn-youtube {
+  color: #fff !important;
+  background-color: pink
+}
+
+.btn-linkedin {
+  color: #fff !important;
+  background-color: lightblue
+}
+
+.btn-twitter {
+  color: #fff !important;
+  background-color: lightgreen
+}
+
+.btn-mail {
+  color: #fff !important;
+  background-color: violet
+}
