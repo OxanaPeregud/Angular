@@ -1,6 +1,13 @@
 export class Comment {
-  rating: number | undefined;
-  comment: string | undefined;
-  author: string | undefined;
-  date: string | undefined;
+  public rating: number;
+  public comment: string;
+  public author: string;
+  public date: string;
+
+  constructor(rating: number, comment: string, author: string, date: string) {
+    this.rating = rating;
+    this.comment = comment;
+    this.author = author;
+    this.date = date;
+  }
 }

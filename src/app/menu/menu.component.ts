@@ -9,9 +9,8 @@ import {DishService} from "../services/dish.service";
 })
 export class MenuComponent implements OnInit {
 
-  dishes: Dish[] | undefined;
-
-  selectedDish: Dish | undefined;
+  public dishes: Dish[] | undefined;
+  public selectedDish: Dish | undefined;
 
   constructor(private dishService: DishService) {
   }
