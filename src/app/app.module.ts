@@ -3,10 +3,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {FlexLayoutModule} from '@angular/flex-layout';
-
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AppComponent} from './app.component';
-
 import 'hammerjs';
 import {MenuComponent} from './menu/menu.component';
 import {MatListModule} from "@angular/material/list";
@@ -23,6 +21,10 @@ import {ContactComponent} from './contact/contact.component';
 import {PromotionService} from "./services/promotion.service";
 import {LoginComponent} from './login/login.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -46,7 +48,11 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
+    FormsModule
   ],
   providers: [
     DishService,
