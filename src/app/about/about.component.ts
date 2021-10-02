@@ -9,7 +9,7 @@ import {LeaderService} from "../services/leader.service";
 })
 export class AboutComponent implements OnInit {
 
-  private leaders: Leader[] | undefined;
+  public leaders: Leader[] | undefined;
 
   constructor(private leaderService: LeaderService) {
   }
