@@ -28,6 +28,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatOptionModule} from "@angular/material/core";
+import {LeaderService} from "./services/leader.service";
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import {MatOptionModule} from "@angular/material/core";
   ],
   providers: [
     DishService,
-    PromotionService
+    PromotionService,
+    LeaderService
   ],
   entryComponents: [
     LoginComponent
