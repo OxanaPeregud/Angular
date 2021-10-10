@@ -10,22 +10,4 @@ export const LEADERS: Leader[] = [
     description: 'Comes from a long established family tradition in farming and produce',
     featured: true,
   },
-  {
-    id: '1',
-    name: 'John Black',
-    abbr: 'EC',
-    image: '',
-    designation: 'Executive Chef',
-    description: 'Award winning three-star Michelin chef with wide international experience',
-    featured: true,
-  },
-  {
-    id: '2',
-    name: 'Micheal Dennis',
-    abbr: 'CFO',
-    image: '',
-    designation: 'Chief Food Officer',
-    description: 'Blessed with the most discerning gustatory sense',
-    featured: true,
-  },
 ];

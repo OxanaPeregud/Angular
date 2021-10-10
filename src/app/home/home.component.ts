@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
         errmess => this.dishErrMess = <any>errmess);
     this.promotionService.getFeaturedPromotion()
       .subscribe(promotion => this.promotion = promotion);
-    this.leaderService.getFeaturedLeader()
+    this.leaderService.getLeader()
       .subscribe(leader => this.leader = leader);
   }
 }

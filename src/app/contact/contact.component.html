@@ -29,16 +29,11 @@
         </div>
       </div>
 
-      <div fxFlex="40">
-        <h4>Map of our Location</h4>
-      </div>
-
     </div>
   </div>
 
   <div fxFlex fxFlexOffset="20px" class="form-size">
     <h3>Send us your Feedback</h3>
-    <p>{{feedbackForm.value | json}} {{feedbackForm.status | json}}</p>
     <form novalidate [formGroup]="feedbackForm" #fform (ngSubmit)="onSubmit()">
       <p>
         <mat-form-field class="half-width">

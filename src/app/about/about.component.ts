@@ -9,13 +9,9 @@ import {LeaderService} from "../services/leader.service";
 })
 export class AboutComponent implements OnInit {
 
-  public leaders: Leader[] | undefined;
-
-  constructor(private leaderService: LeaderService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.leaderService.getLeaders()
-      .subscribe(leaders => this.leaders = leaders);
   }
 }

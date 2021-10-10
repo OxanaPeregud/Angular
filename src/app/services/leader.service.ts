@@ -12,15 +12,7 @@ export class LeaderService {
   constructor() {
   }
 
-  public getLeaders(): Observable<Leader[]> {
-    return of(LEADERS).pipe(delay(1000));
-  }
-
-  public getLeader(id: string): Observable<Leader> {
-    return of(LEADERS.filter((leader) => (leader.id === id))[0]).pipe(delay(1000));
-  }
-
-  public getFeaturedLeader(): Observable<Leader> {
+  public getLeader(): Observable<Leader> {
     return of(LEADERS.filter((leader) => leader.featured)[0]).pipe(delay(1000));
   }
 }
