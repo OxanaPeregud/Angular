@@ -4,11 +4,15 @@ import {Dish} from "../shared/dish";
 import {DishService} from "../services/dish.service";
 import {Location} from "@angular/common";
 import {switchMap} from "rxjs/operators";
+import {visibility} from "../animations/app.animation";
 
 @Component({
   selector: 'app-dishdetail',
   templateUrl: './dish-detail.component.html',
-  styleUrls: ['./dish-detail.component.scss']
+  styleUrls: ['./dish-detail.component.scss'],
+  animations: [
+    visibility()
+  ],
 })
 export class DishDetailComponent implements OnInit {
 
@@ -17,6 +21,7 @@ export class DishDetailComponent implements OnInit {
   public prev: string | undefined;
   public next: string | undefined;
   public errMess: string | undefined;
+  public visibility = 'shown';
 
   constructor(private dishService: DishService,
               private route: ActivatedRoute,
@@ -27,10 +32,15 @@ export class DishDetailComponent implements OnInit {
   ngOnInit(): void {
     this.dishService.getDishIds()
       .subscribe((dishIds) => this.dishIds = dishIds);
-    this.route.params.pipe(switchMap((params: Params) => this.dishService.getDish(params['id'])))
+    this.route.params
+      .pipe(switchMap((params: Params) => {
+        this.visibility = 'hidden';
+        return this.dishService.getDish(params['id']);
+      }))
       .subscribe(dish => {
           this.dish = dish;
-          this.setPrevNext(dish.id)
+          this.setPrevNext(dish.id);
+          this.visibility = 'shown';
         },
         errmess => this.errMess = <any>errmess);
   }
